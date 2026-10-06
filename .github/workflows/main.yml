@@ -16,7 +16,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          echo "Current timestamp: $(date)" >> timestamp
-          git add timestamp
+          echo "Current timestamp: $(date)" >> live/timestamp
+          git add live/timestamp
           git commit -m "Update timestamp"
           git push

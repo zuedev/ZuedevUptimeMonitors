@@ -4,13 +4,14 @@ on:
   #   - cron: "* * * * *"
 
 jobs:
-  hello:
+  timestamp:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
-        run: echo "Hello, world!"
-  goodbye:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Say Goodbye
-        run: echo "Goodbye, world!"
+      - name: Commit Timestamp to Repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          echo "Current timestamp: $(date)" >> timestamp
+          git add timestamp
+          git commit -m "Update timestamp"
+          git push

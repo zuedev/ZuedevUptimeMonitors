@@ -1,0 +1,18 @@
+root: live
+
+targets:
+  http:
+    - name: zue.dev
+      url: https://zue.dev
+    - name: t1.zue.dev
+      url: https://t1.zue.dev
+    - name: unnamed.group
+      url: https://unnamed.group
+    - name: uagpmc.com
+      url: https://uagpmc.com
+    - name: graysonld.com
+      url: https://graysonld.com
+    - name: yayjaybae.com
+      url: https://yayjaybae.com
+    - name: teamsweets.com
+      url: https://teamsweets.com

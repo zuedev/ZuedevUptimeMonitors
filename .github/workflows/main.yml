@@ -24,7 +24,7 @@ jobs:
       - name: Run the main script
         run: |
           cd main
-          deno run --allow-all main/main.js
+          deno run --allow-all main.js
           cp -r live/* ../live/
       - name: Commit and Push
         run: |

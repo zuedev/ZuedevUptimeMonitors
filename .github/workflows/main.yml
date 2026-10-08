@@ -22,7 +22,10 @@ jobs:
         with:
           deno-version: v2.9.4
       - name: Run the main script
-        run: deno run --allow-all main/main.js
+        run: |
+          cd main
+          deno run --allow-all main/main.js
+          cp -r live/* ../live/
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
